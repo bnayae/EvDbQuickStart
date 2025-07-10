@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvDbQuickStart.Funds.Events", "EvDbQuickStart.Funds.Events\EvDbQuickStart.Funds.Events.csproj", "{1838D65F-80A4-4767-B0BC-8DA06E705B59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvDbQuickStart.Funds.Abstractions", "EvDbQuickStart.Funds.Abstractions\EvDbQuickStart.Funds.Abstractions.csproj", "{7428E041-8B9E-490B-875C-A1A7DB2E285E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvDbQuickStart.Funds.Views", "EvDbQuickStart.Funds.Views\EvDbQuickStart.Funds.Views.csproj", "{D6200996-3BE7-4E82-8D46-8C42CFF1F56E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvDbQuickStart.Funds.Repositories", "EvDbQuickStart.Funds.Repositories\EvDbQuickStart.Funds.Repositories.csproj", "{2E890094-DEC1-4CFD-8CD2-30285A4ACD3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBs", "DBs", "{323C89C4-E6A4-4ED7-B87A-993F1406AD1A}"
+	ProjectSection(SolutionItems) = preProject
+		docker\DBs\compose.yaml = docker\DBs\compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OTEL", "OTEL", "{52A78D9A-1804-42A7-A37F-ACECA1B9A765}"
+	ProjectSection(SolutionItems) = preProject
+		docker\OTEL\compose.yaml = docker\OTEL\compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1838D65F-80A4-4767-B0BC-8DA06E705B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1838D65F-80A4-4767-B0BC-8DA06E705B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1838D65F-80A4-4767-B0BC-8DA06E705B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1838D65F-80A4-4767-B0BC-8DA06E705B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7428E041-8B9E-490B-875C-A1A7DB2E285E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7428E041-8B9E-490B-875C-A1A7DB2E285E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7428E041-8B9E-490B-875C-A1A7DB2E285E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7428E041-8B9E-490B-875C-A1A7DB2E285E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6200996-3BE7-4E82-8D46-8C42CFF1F56E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6200996-3BE7-4E82-8D46-8C42CFF1F56E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6200996-3BE7-4E82-8D46-8C42CFF1F56E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6200996-3BE7-4E82-8D46-8C42CFF1F56E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E890094-DEC1-4CFD-8CD2-30285A4ACD3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E890094-DEC1-4CFD-8CD2-30285A4ACD3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E890094-DEC1-4CFD-8CD2-30285A4ACD3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E890094-DEC1-4CFD-8CD2-30285A4ACD3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{323C89C4-E6A4-4ED7-B87A-993F1406AD1A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{52A78D9A-1804-42A7-A37F-ACECA1B9A765} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BF28D3D-49E3-40C1-8744-31E7AB5ABEC6}
+	EndGlobalSection
+EndGlobal

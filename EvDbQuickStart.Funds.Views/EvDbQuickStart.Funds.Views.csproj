@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="EvDb.Core" Version="4.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EvDbQuickStart.Funds.Abstractions\EvDbQuickStart.Funds.Abstractions.csproj" />
+    <ProjectReference Include="..\EvDbQuickStart.Funds.Events\EvDbQuickStart.Funds.Events.csproj" />
+  </ItemGroup>
+</Project>
