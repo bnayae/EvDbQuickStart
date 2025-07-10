@@ -1,4 +1,4 @@
-name: evdb-databases
+name: evdb-quick-start-databases
 
 volumes:
   mssql:
@@ -17,7 +17,7 @@ volumes:
 services:
 
   sqlserver:
-    container_name: sqlserver-event-source
+    container_name: sqlserver-event-source-quick-start
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
       SA_PASSWORD: "MasadNetunim12!@"
@@ -26,25 +26,9 @@ services:
       - "1433:1433"
     # command: sh -c ' chmod +x /docker_init/entrypoint.sh; /docker_init/entrypoint.sh & /opt/mssql/bin/sqlservr;'
     restart: unless-stopped
-
-  mssql-tools:
-    # This service uses the official Microsoft SQL Server tools image
-    # its allows you to use tools like sqlcmd, bcp, and other command-line utilities
-    # You can interact with the mssql-tools container by executing
-    # `docker exec -it mssql-tools bash`
-    # From there, you can use sqlcmd, bcp, and other tools as needed.
-    container_name: mssql-tools
-    image: mcr.microsoft.com/mssql-tools
-    depends_on:
-      - sqlserver
-    environment:
-      ACCEPT_EULA: "Y"
-      SA_PASSWORD: "MasadNetunim12!@"
-    stdin_open: true
-    tty: true
     
   psql:
-    container_name: psql-event-source
+    container_name: psql-event-source-quick-start
     image: postgres:latest
     environment:
       POSTGRES_USER: test_user
@@ -59,7 +43,7 @@ services:
     
   mongodb:
     image: mongo:8
-    container_name: mongodb-event-source
+    container_name: mongodb-event-source-quick-start
     volumes:
       - mongodb_data:/data/db
     environment:
@@ -78,7 +62,7 @@ services:
     restart: unless-stopped
   mongo-init:
     image: mongo:8
-    container_name: mongodb-event-source-init
+    container_name: mongodb-event-source-init-quick-start
     depends_on:
       mongodb:
         condition: service_healthy

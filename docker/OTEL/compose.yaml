@@ -1,8 +1,8 @@
-name: otel-services-evdb
+name: otel-services-evdb-quick-start
 services:
   jaeger:
     image: jaegertracing/opentelemetry-all-in-one
-    container_name: evdb-jaeger
+    container_name: evdb-jaeger-quick-start
     environment:
       - COLLECTOR_OTLP_ENABLED=true
     ports:
@@ -14,7 +14,7 @@ services:
   aspire-dashboard:
     # https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/dashboard/configuration
     image: mcr.microsoft.com/dotnet/nightly/aspire-dashboard:latest
-    container_name: evdb-aspire-dashboard
+    container_name: evdb-aspire-dashboard-quick-start
     ports:
       - 18888:18888
       - 18889:18889
