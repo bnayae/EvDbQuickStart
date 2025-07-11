@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OTEL", "OTEL", "{52A78D9A-1
 		docker\OTEL\compose.yaml = docker\OTEL\compose.yaml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvDbQuickStart.Funds.WebAPI", "EvDbQuickStart.Funds.WebAPI\EvDbQuickStart.Funds.WebAPI.csproj", "{2A6B8432-58A1-4382-A326-A166F17017C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{2E890094-DEC1-4CFD-8CD2-30285A4ACD3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E890094-DEC1-4CFD-8CD2-30285A4ACD3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E890094-DEC1-4CFD-8CD2-30285A4ACD3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6B8432-58A1-4382-A326-A166F17017C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6B8432-58A1-4382-A326-A166F17017C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6B8432-58A1-4382-A326-A166F17017C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6B8432-58A1-4382-A326-A166F17017C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

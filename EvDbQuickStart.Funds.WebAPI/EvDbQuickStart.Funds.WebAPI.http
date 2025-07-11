@@ -1,0 +1,32 @@
+@EvDbQuickStart.Funds.WebAPI_HostAddress = http://localhost:5051
+
+GET {{EvDbQuickStart.Funds.WebAPI_HostAddress}}/quick-start/1
+Accept: application/json
+
+###
+
+POST {{EvDbQuickStart.Funds.WebAPI_HostAddress}}/quick-start
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Operation": "Deposit",
+  "Id": 1,
+  "Amount": 100,
+  "Attribution": "Gift"
+}
+
+###
+
+POST {{EvDbQuickStart.Funds.WebAPI_HostAddress}}/quick-start
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Operation": "Withdraw",
+  "Id": 1,
+  "Amount": 50,
+  "Attribution": "Food"
+}
+
+###

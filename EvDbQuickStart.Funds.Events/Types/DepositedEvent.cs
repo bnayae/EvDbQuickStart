@@ -6,4 +6,5 @@ namespace EvDbQuickStart.Funds.Events;
 public readonly partial record struct DepositedEvent
 {
     public required double Amount { get; init; }
+    public string? Attribution { get; init; }
 }
