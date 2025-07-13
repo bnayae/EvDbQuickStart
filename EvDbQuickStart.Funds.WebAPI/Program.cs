@@ -2,7 +2,6 @@ using EvDb.Core;
 using EvDbQuickStart.Funds.Events;
 using EvDbQuickStart.Funds.Repositories;
 using EvDbQuickStart.Funds.WebAPI;
-using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -38,7 +37,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/quick-start/{accountId}", async (IEvDbFundsFactory factory, int accountId) =>
+app.MapGet("/quick-start/{accountId}", async (IEvDbFundsFactory factory, Guid accountId) =>
 {
     IEvDbFunds stream = await factory.GetAsync(accountId);
     var balance = stream.Views.Balance;
@@ -50,15 +49,15 @@ app.MapPost("/quick-start/", async (IEvDbFundsFactory factory, FunRequest reques
 {
     // Consider to move this logic to a service layer
     IEvDbFunds stream = await factory.GetAsync(request.AccountId);
-    if(request.Operation == OperationType.Deposit)
+    if (request.Operation == OperationType.Deposit)
     {
-        var deposit = new DepositedEvent { Amount = request.Amount, Attribution = request.Attribution };   
+        var deposit = new DepositedEvent { Amount = request.Amount, Attribution = request.Attribution };
         await stream.AppendAsync(deposit);
     }
-    else if(request.Operation == OperationType.Withdraw)
+    else if (request.Operation == OperationType.Withdraw)
     {
-        var deposit = new WithdrawnEvent(request.Amount){ Attribution = request.Attribution };   
-        await stream.AppendAsync(deposit);
+        var withdraw = new WithdrawnEvent(request.Amount) { Attribution = request.Attribution };
+        await stream.AppendAsync(withdraw);
     }
     await stream.StoreAsync();
     var balance = stream.Views.Balance;
@@ -67,3 +66,4 @@ app.MapPost("/quick-start/", async (IEvDbFundsFactory factory, FunRequest reques
 .WithOpenApi();
 
 await app.RunAsync();
+

@@ -30,6 +30,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OTEL", "OTEL", "{52A78D9A-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvDbQuickStart.Funds.WebAPI", "EvDbQuickStart.Funds.WebAPI\EvDbQuickStart.Funds.WebAPI.csproj", "{2A6B8432-58A1-4382-A326-A166F17017C6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DA02B354-AB6D-4D0B-8F1C-28AC54EB348F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvDbQuickStart.Funds.IntegrationTests", "EvDbQuickStart.Funds.IntegrationTests\EvDbQuickStart.Funds.IntegrationTests.csproj", "{F9BE2802-C3E2-476B-9FCC-6149CD538119}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +60,10 @@ Global
 		{2A6B8432-58A1-4382-A326-A166F17017C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A6B8432-58A1-4382-A326-A166F17017C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A6B8432-58A1-4382-A326-A166F17017C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BE2802-C3E2-476B-9FCC-6149CD538119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BE2802-C3E2-476B-9FCC-6149CD538119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BE2802-C3E2-476B-9FCC-6149CD538119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BE2802-C3E2-476B-9FCC-6149CD538119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{323C89C4-E6A4-4ED7-B87A-993F1406AD1A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{52A78D9A-1804-42A7-A37F-ACECA1B9A765} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F9BE2802-C3E2-476B-9FCC-6149CD538119} = {DA02B354-AB6D-4D0B-8F1C-28AC54EB348F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BF28D3D-49E3-40C1-8744-31E7AB5ABEC6}
