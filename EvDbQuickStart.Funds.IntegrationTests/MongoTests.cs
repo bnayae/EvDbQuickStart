@@ -17,13 +17,14 @@ public sealed class MongoTests
 
     public MongoTests(ITestOutputHelper output)
     {
+        _output = output;
         var services = new ServiceCollection();
 
         // Register dependencies
         services.AddLogging(builder =>
         {
             builder.ClearProviders();
-            builder.AddProvider(new XUnitLoggerProvider(output));
+            builder.AddProvider(new XUnitLoggerProvider(_output));
         });
 
         var context = EvDbStorageContext.CreateWithEnvironment("tests", _tablePrefix, schema: "default");

@@ -1,4 +1,3 @@
-using EvDb.Adapters.Store.Postgres;
 using EvDb.Adapters.Store.SqlServer;
 using EvDb.Core;
 using EvDbQuickStart.Funds.Events;
@@ -19,7 +18,7 @@ public sealed class SqlServerTests : BaseTests
     private readonly EvDbStorageContext _context;
     private readonly ILogger _logger;
 
-    public SqlServerTests(ITestOutputHelper output): base(output)
+    public SqlServerTests(ITestOutputHelper output) : base(output)
     {
         var services = new ServiceCollection();
 
